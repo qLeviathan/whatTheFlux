@@ -143,7 +143,7 @@ class QFNNVisualizer:
         # Plot attention matrix for each layer
         for i, (ax, attention) in enumerate(zip(axes, attention_patterns)):
             # Extract attention for first batch, limit to max_tokens
-            attn_matrix = attention[0, :max_tokens, :max_tokens].numpy()
+            attn_matrix = attention[0, :max_tokens, :max_tokens].cpu().numpy()
             
             # Create heatmap
             im = ax.imshow(attn_matrix, cmap='Blues')
@@ -174,7 +174,7 @@ class QFNNVisualizer:
         plt.close()
         
         # Visualize attention flow
-        self._visualize_attention_flow(tokens, attention_patterns[0][0, :max_tokens, :max_tokens].numpy())
+        self._visualize_attention_flow(tokens, attention_patterns[0][0, :max_tokens, :max_tokens].cpu().numpy())
         
         return fig
     
@@ -332,8 +332,8 @@ class QFNNVisualizer:
             state = states[0]  # [N, 2]
             
             # Calculate angles and radii
-            angles = torch.atan2(state[:, 1], state[:, 0]).numpy()  # [N]
-            radii = torch.norm(state, dim=1).numpy()  # [N]
+            angles = torch.atan2(state[:, 1], state[:, 0]).cpu().numpy()  # [N]
+            radii = torch.norm(state, dim=1).cpu().numpy()  # [N]
             
             angles_by_layer.append(angles)
             radii_by_layer.append(radii)

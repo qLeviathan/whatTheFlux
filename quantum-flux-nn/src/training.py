@@ -137,12 +137,13 @@ class WikiTextDataModule:
 
 class HebbianTrainer:
     """Trainer with Hebbian learning (wire together, fire together)"""
-    def __init__(self, model, config, logger):
+    def __init__(self, model, config, logger, tokenizer=None):
         self.model = model
         self.config = config
         self.logger = logger
         self.learning_rate = config.learning_rate
         self.device = config.device
+        self.tokenizer = tokenizer  # Store tokenizer for visualization
         
         # Track training metrics
         self.training_stats = {
@@ -229,8 +230,10 @@ class HebbianTrainer:
         
         return avg_loss, perplexity, attention_patterns_list
     
-    def train(self, train_dataloader, val_dataloader, epochs, output_dir, 
+    def train(self, train_dataloader, val_dataloader, epochs, output_dir, tokenizer=None,
               eval_every=1000, visualize_every=5000, save_every=10000):
+        # Use tokenizer passed to method or the one stored in the class
+        self.tokenizer = tokenizer or self.tokenizer
         """Train the model"""
         os.makedirs(output_dir, exist_ok=True)
         vis_dir = os.path.join(output_dir, 'visualizations')
@@ -288,7 +291,9 @@ class HebbianTrainer:
                     step_vis_dir = os.path.join(vis_dir, f'step_{global_step}')
                     os.makedirs(step_vis_dir, exist_ok=True)
                     
-                    visualizer = QFNNVisualizer(self.model, train_dataloader.dataset.dataset.tokenizer, step_vis_dir)
+                    # IMPORTANT: Using self.tokenizer instead of trying to access through dataset
+                    # The dataset object doesn't have direct access to the tokenizer
+                    visualizer = QFNNVisualizer(self.model, self.tokenizer, step_vis_dir)
                     visualizer.visualize_token_embeddings()
                     
                     if len(attention_patterns) > 0:
@@ -492,8 +497,8 @@ def train_wikitext(config, output_dir='output', epochs=5, batch_size=8, context_
     
     logger.info(f"Model created with {total_params} total parameters ({trainable_params} trainable)")
     
-    # Create trainer
-    trainer = HebbianTrainer(model, config, logger)
+    # Create trainer and pass tokenizer
+    trainer = HebbianTrainer(model, config, logger, tokenizer=data_module.tokenizer)
     
     # Train model
     logger.info("Starting training")
