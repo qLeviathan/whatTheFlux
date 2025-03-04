@@ -25,9 +25,10 @@ This 2D representation is much more parameter-efficient than traditional high-di
 ### 2. Quantum Flux Attention
 
 The attention mechanism combines:
-- **Direct similarity**: `S_direct[i,j] = r_i * r_j * cos(θ_i - θ_j)` - alignment of semantic meanings
-- **Orthogonal similarity**: `S_ortho[i,j] = r_i * r_j * sin(θ_i - θ_j)` - phase-shifted relationships
-- **Inverse perturbation gating**: `G[i,j] = 1/(ε + |S[i,j]|)` - natural sparsity mechanism
+- **Direct similarity (Real component)**: `S_direct[i,j] = r_i * r_j * cos(θ_i - θ_j)` - alignment of semantic meanings
+- **Orthogonal similarity (Complex component)**: `S_ortho[i,j] = r_i * r_j * sin(θ_i - θ_j)` - phase-shifted relationships
+- **Phase distance**: `D[i,j] = √(S_direct[i,j]² + S_ortho[i,j]²)` - quantum discrepancy between tokens
+- **Superposition probability**: `P[i,j] = 1 - D[i,j]/max(D)` - as distance approaches zero, probability approaches 1
 
 ### 3. State Evolution
 
@@ -54,7 +55,7 @@ The training process follows a "wire together, fire together" principle:
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/quantum-flux-nn.git
+git clone https://github.com/qLeviathan/whatTheFlux.git
 cd quantum-flux-nn
 
 # Install dependencies
@@ -63,6 +64,11 @@ pip install torch transformers datasets numpy matplotlib seaborn networkx tqdm
 
 ## Usage
 
+### Fast Training on WSL
+
+```
+PS C:\Users\casma\whatTheFlux> wsl python3.11 quantum-flux-nn/src/training.py --output_dir=test_output --epochs=2 --batch_size=4 --context_length=256 --learning_rate=0.001 --num_layers=3 --hidden_dim=256 --use_hebbian --alpha=0.5 --dt_scale=0.1 --threshold=0.05 --epsilon=1e-5 --r_min=0.5 --r_max=2.0 --radius_rate=0.01     
+```
 ### Training
 
 ```bash
@@ -240,7 +246,7 @@ If you use QFNN in your research, please cite:
 ```
 @article{quantum_flux_nn,
   title={Quantum Flux Neural Network: An Efficient Architecture Inspired by Physical Principles},
-  author={Marc Castillo},
+  author={Leviathan AI Corporation, Marc Castillo},
   journal={ArXiv},
   year={2025}
 }

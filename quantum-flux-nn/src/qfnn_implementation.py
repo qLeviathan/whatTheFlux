@@ -133,12 +133,12 @@ class StateEvolution(nn.Module):
         self.config = config
         self.dt = config.dt_scale
         self.beta = config.beta
-    
+        self.epsilon = config.epsilon 
     def forward(self, states, attention_fn):
         """
-        Evolve states using Heun-Euler method
+        Evolve states using Heun-Euler method with superposition-based skip connections
         Input: states [B, N, 2], attention_fn (callable)
-        Output: new_states [B, N, 2]
+        Output: new_states [B, N, 2], attention [B, N, N]
         """
         # First step of Heun-Euler method
         attention, context = attention_fn(states)
@@ -154,9 +154,14 @@ class StateEvolution(nn.Module):
         # Final update
         evolved_states = states + 0.5 * (k1 + k2)  # [B, N, 2]
         
-        # Quantum tunneling via skip connections
-        # Larger time steps → more original information preserved
-        skip_weight = torch.sigmoid(self.beta * (self.dt - 1.0))
+        # Calculate phase distance between original and evolved states
+        phase_distance = torch.sqrt(torch.sum((states - evolved_states)**2, dim=-1, keepdim=True) + self.epsilon)
+        
+        # Calculate superposition probability (normalized inverse distance)
+        max_distance = torch.max(phase_distance)
+        skip_weight = 1.0 - (phase_distance / (max_distance + self.epsilon))
+        
+        # Apply superposition-weighted combination (quantum tunneling)
         new_states = skip_weight * states + (1 - skip_weight) * evolved_states  # [B, N, 2]
         
         return new_states, attention

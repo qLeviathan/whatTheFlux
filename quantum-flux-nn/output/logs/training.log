@@ -1,0 +1,8 @@
+2025-03-04 14:56:11,291 - qfnn_training - INFO - Training QFNN on WikiText with config: {'vocab_size': 30522, 'hidden_dim': 128, 'num_layers': 2, 'max_seq_length': 1024, 'epsilon': 1e-05, 'threshold': 0.01, 'alpha': 0.5, 'dt_scale': 0.1, 'beta': 10.0, 'r_min': 0.5, 'r_max': 2.0, 'radius_rate': 0.01, 'learning_rate': 0.001, 'use_hebbian': False, 'device': 'cuda'}
+2025-03-04 15:02:49,269 - qfnn_training - INFO - Data prepared: 28567 training batches, 60 validation batches
+2025-03-04 15:02:49,382 - qfnn_training - INFO - Model created with 3998766 total parameters (3998766 trainable)
+2025-03-04 15:02:49,382 - qfnn_training - INFO - Starting training
+2025-03-04 15:21:02,637 - qfnn_training - INFO - Training QFNN on WikiText with config: {'vocab_size': 30522, 'hidden_dim': 128, 'num_layers': 2, 'max_seq_length': 1024, 'epsilon': 1e-05, 'threshold': 0.01, 'alpha': 0.5, 'dt_scale': 0.1, 'beta': 10.0, 'r_min': 0.5, 'r_max': 2.0, 'radius_rate': 0.01, 'learning_rate': 0.001, 'use_hebbian': False, 'device': 'cuda'}
+2025-03-04 15:26:27,031 - qfnn_training - INFO - Data prepared: 28567 training batches, 60 validation batches
+2025-03-04 15:26:27,313 - qfnn_training - INFO - Model created with 3998766 total parameters (3998766 trainable)
+2025-03-04 15:26:27,314 - qfnn_training - INFO - Starting training

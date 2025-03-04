@@ -1,0 +1,4 @@
+2025-03-04 15:40:31,676 - qfnn_training - INFO - Training QFNN on WikiText with config: {'vocab_size': 30522, 'hidden_dim': 256, 'num_layers': 3, 'max_seq_length': 256, 'epsilon': 1e-05, 'threshold': 0.05, 'alpha': 0.5, 'dt_scale': 0.1, 'beta': 10.0, 'r_min': 0.5, 'r_max': 2.0, 'radius_rate': 0.01, 'learning_rate': 0.001, 'use_hebbian': True, 'device': 'cuda'}
+2025-03-04 15:45:58,149 - qfnn_training - INFO - Data prepared: 114957 training batches, 242 validation batches
+2025-03-04 15:45:58,424 - qfnn_training - INFO - Model created with 7905966 total parameters (7905966 trainable)
+2025-03-04 15:45:58,425 - qfnn_training - INFO - Starting training

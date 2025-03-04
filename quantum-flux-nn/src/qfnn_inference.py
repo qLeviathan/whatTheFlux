@@ -256,54 +256,89 @@ class QFNNInference:
                 # Orthogonal similarity = dot product with orthogonal state
                 ortho_sim[i, j] = np.dot(token_states[i], orthogonal_states[j])
         
+        # Calculate phase distance
+        phase_distance = np.sqrt(direct_sim**2 + ortho_sim**2 + 1e-8)
+        
+        # Calculate superposition probability
+        max_distance = np.max(phase_distance)
+        superposition_prob = 1.0 - (phase_distance / (max_distance + 1e-8))
+        
         # Create similarity heatmaps
-        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
+        fig, ax_grid = plt.subplots(2, 2, figsize=(18, 16))
+        axs = ax_grid.flatten()
         
         # Direct similarity heatmap
-        im1 = ax1.imshow(direct_sim, cmap='Blues')
-        ax1.set_title('Direct Token Similarities')
-        ax1.set_xlabel('Token')
-        ax1.set_ylabel('Token')
+        im1 = axs[0].imshow(direct_sim, cmap='Blues')
+        axs[0].set_title('Direct Token Similarities (Real Component)')
+        axs[0].set_xlabel('Token')
+        axs[0].set_ylabel('Token')
         
         # Add token labels
-        ax1.set_xticks(np.arange(max_tokens))
-        ax1.set_yticks(np.arange(max_tokens))
-        ax1.set_xticklabels(token_strings[:max_tokens], rotation=90)
-        ax1.set_yticklabels(token_strings[:max_tokens])
+        axs[0].set_xticks(np.arange(max_tokens))
+        axs[0].set_yticks(np.arange(max_tokens))
+        axs[0].set_xticklabels(token_strings[:max_tokens], rotation=90)
+        axs[0].set_yticklabels(token_strings[:max_tokens])
         
         # Add colorbar
-        plt.colorbar(im1, ax=ax1, label='Direct Similarity')
+        plt.colorbar(im1, ax=axs[0], label='Direct Similarity')
         
         # Orthogonal similarity heatmap
-        im2 = ax2.imshow(ortho_sim, cmap='RdBu_r', vmin=-np.max(np.abs(ortho_sim)), vmax=np.max(np.abs(ortho_sim)))
-        ax2.set_title('Orthogonal Token Relationships')
-        ax2.set_xlabel('Token')
-        ax2.set_ylabel('Token')
+        im2 = axs[1].imshow(ortho_sim, cmap='RdBu_r', vmin=-np.max(np.abs(ortho_sim)), vmax=np.max(np.abs(ortho_sim)))
+        axs[1].set_title('Orthogonal Token Relationships (Complex Component)')
+        axs[1].set_xlabel('Token')
+        axs[1].set_ylabel('Token')
         
         # Add token labels
-        ax2.set_xticks(np.arange(max_tokens))
-        ax2.set_yticks(np.arange(max_tokens))
-        ax2.set_xticklabels(token_strings[:max_tokens], rotation=90)
-        ax2.set_yticklabels(token_strings[:max_tokens])
+        axs[1].set_xticks(np.arange(max_tokens))
+        axs[1].set_yticks(np.arange(max_tokens))
+        axs[1].set_xticklabels(token_strings[:max_tokens], rotation=90)
+        axs[1].set_yticklabels(token_strings[:max_tokens])
         
         # Add colorbar
-        plt.colorbar(im2, ax=ax2, label='Orthogonal Similarity')
+        plt.colorbar(im2, ax=axs[1], label='Orthogonal Similarity')
+        
+        # Phase distance heatmap
+        im3 = axs[2].imshow(phase_distance, cmap='viridis')
+        axs[2].set_title('Phase Distance Between Tokens')
+        axs[2].set_xlabel('Token')
+        axs[2].set_ylabel('Token')
+        
+        # Add token labels
+        axs[2].set_xticks(np.arange(max_tokens))
+        axs[2].set_yticks(np.arange(max_tokens))
+        axs[2].set_xticklabels(token_strings[:max_tokens], rotation=90)
+        axs[2].set_yticklabels(token_strings[:max_tokens])
+        
+        # Add colorbar
+        plt.colorbar(im3, ax=axs[2], label='Phase Distance')
+        
+        # Superposition probability heatmap
+        im4 = axs[3].imshow(superposition_prob, cmap='plasma')
+        axs[3].set_title('Superposition Probability Between Tokens')
+        axs[3].set_xlabel('Token')
+        axs[3].set_ylabel('Token')
+        
+        # Add token labels
+        axs[3].set_xticks(np.arange(max_tokens))
+        axs[3].set_yticks(np.arange(max_tokens))
+        axs[3].set_xticklabels(token_strings[:max_tokens], rotation=90)
+        axs[3].set_yticklabels(token_strings[:max_tokens])
+        
+        # Add colorbar
+        plt.colorbar(im4, ax=axs[3], label='Superposition Probability')
         
         plt.tight_layout()
-        plt.savefig(f"{output_dir}/token_similarities.png", dpi=300)
+        plt.savefig(f"{output_dir}/token_relationships.png", dpi=300)
         plt.close()
         
-        # Calculate combined similarity (direct + alpha * orthogonal)
-        combined_sim = direct_sim + self.model.config.alpha * ortho_sim
-        
-        # Apply inverse perturbation gating
-        gated_sim = combined_sim / (self.model.config.epsilon + np.abs(combined_sim))
+        # Calculate combined similarity with superposition weighting
+        combined_sim = (direct_sim + self.model.config.alpha * ortho_sim) * superposition_prob
         
         # Apply threshold for sparsity
-        gated_sim[np.abs(gated_sim) < self.model.config.threshold] = 0
+        combined_sim[superposition_prob < self.model.config.threshold] = 0
         
         # Create network graph visualization
-        self._create_token_network_graph(gated_sim, token_strings[:max_tokens], output_dir)
+        self._create_token_network_graph(combined_sim, token_strings[:max_tokens], output_dir)
     
     def _create_token_network_graph(self, similarity_matrix, token_labels, output_dir):
         """Create network graph visualization of token relationships"""

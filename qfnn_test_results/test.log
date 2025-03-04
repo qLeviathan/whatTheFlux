@@ -1,0 +1,98 @@
+2025-03-04 15:47:05,080 - INFO - Created dataset with 100 samples, 80 for training
+2025-03-04 15:47:05,080 - INFO - Vocabulary size: 100, Sequence length: 32
+2025-03-04 15:47:05,094 - INFO - Using device: cuda
+2025-03-04 15:47:05,163 - INFO - Model created with 6892 parameters
+2025-03-04 15:48:51,779 - INFO - Created dataset with 100 samples, 80 for training
+2025-03-04 15:48:51,779 - INFO - Vocabulary size: 100, Sequence length: 32
+2025-03-04 15:48:51,792 - INFO - Using device: cuda
+2025-03-04 15:48:51,852 - INFO - Model created with 6892 parameters
+2025-03-04 15:48:51,981 - INFO - Forward pass shape: torch.Size([4, 32, 100]), took 0.1287s
+2025-03-04 15:48:51,984 - INFO - Number of attention layers: 2
+2025-03-04 15:48:51,984 - INFO - Attention shape: torch.Size([4, 32, 32])
+2025-03-04 15:48:51,985 - INFO - Using Hebbian learning
+2025-03-04 15:48:52,104 - INFO - Epoch 1/2 - Avg loss: 4.6934
+2025-03-04 15:48:52,116 - INFO - Validation loss: 4.6661
+2025-03-04 15:48:52,243 - INFO - Epoch 2/2 - Avg loss: 4.6206
+2025-03-04 15:48:52,254 - INFO - Validation loss: 4.6547
+2025-03-04 15:48:52,255 - INFO - Model saved to qfnn_test_results/mini_trained_model.pt
+2025-03-04 15:48:52,256 - INFO - Generation prompt: TOK5 TOK10 TOK15
+2025-03-04 15:48:52,256 - INFO - Generating 10 new tokens...
+2025-03-04 15:48:52,315 - INFO - Generated text: TOK21 TOK1 TOK29 TOK90 TOK1 TOK28 TOK52 TOK33 TOK80 TOK27 TOK63 TOK20 TOK20 TOK97 TOK63 TOK20 TOK97 TOK63 TOK20 TOK97
+2025-03-04 15:48:52,316 - INFO - Visualizing token embeddings...
+2025-03-04 15:48:53,277 - INFO - Visualizing attention patterns...
+2025-03-04 15:50:32,614 - INFO - Created dataset with 100 samples, 80 for training
+2025-03-04 15:50:32,614 - INFO - Vocabulary size: 100, Sequence length: 32
+2025-03-04 15:50:32,626 - INFO - Using device: cuda
+2025-03-04 15:50:32,704 - INFO - Model created with 6892 parameters
+2025-03-04 15:50:32,854 - INFO - Forward pass shape: torch.Size([4, 32, 100]), took 0.1485s
+2025-03-04 15:50:32,857 - INFO - Number of attention layers: 2
+2025-03-04 15:50:32,857 - INFO - Attention shape: torch.Size([4, 32, 32])
+2025-03-04 15:50:32,857 - INFO - Using Hebbian learning
+2025-03-04 15:50:32,984 - INFO - Epoch 1/2 - Avg loss: 4.6992
+2025-03-04 15:50:32,996 - INFO - Validation loss: 4.6602
+2025-03-04 15:50:33,126 - INFO - Epoch 2/2 - Avg loss: 4.6274
+2025-03-04 15:50:33,137 - INFO - Validation loss: 4.6656
+2025-03-04 15:50:33,138 - INFO - Model saved to qfnn_test_results/mini_trained_model.pt
+2025-03-04 15:50:33,139 - INFO - Generation prompt: TOK5 TOK10 TOK15
+2025-03-04 15:50:33,139 - INFO - Generating 10 new tokens...
+2025-03-04 15:50:33,201 - INFO - Generated text: TOK14 TOK83 TOK94 TOK36 TOK89 TOK59 TOK16 TOK83 TOK19 TOK2 TOK36 TOK36 TOK36 TOK36 TOK36 TOK36 TOK36 TOK36 TOK36 TOK36
+2025-03-04 15:50:33,202 - INFO - Visualizing token embeddings...
+2025-03-04 15:50:34,183 - INFO - Visualizing attention patterns...
+2025-03-04 15:52:46,659 - INFO - Created dataset with 100 samples, 80 for training
+2025-03-04 15:52:46,659 - INFO - Vocabulary size: 100, Sequence length: 32
+2025-03-04 15:52:46,671 - INFO - Using device: cuda
+2025-03-04 15:52:46,744 - INFO - Model created with 6892 parameters
+2025-03-04 15:52:46,881 - INFO - Forward pass shape: torch.Size([4, 32, 100]), took 0.1357s
+2025-03-04 15:52:46,883 - INFO - Number of attention layers: 2
+2025-03-04 15:52:46,883 - INFO - Attention shape: torch.Size([4, 32, 32])
+2025-03-04 15:52:46,884 - INFO - Using Hebbian learning
+2025-03-04 15:52:47,023 - INFO - Epoch 1/2 - Avg loss: 4.7025
+2025-03-04 15:52:47,034 - INFO - Validation loss: 4.6582
+2025-03-04 15:52:47,159 - INFO - Epoch 2/2 - Avg loss: 4.6302
+2025-03-04 15:52:47,170 - INFO - Validation loss: 4.6514
+2025-03-04 15:52:47,171 - INFO - Model saved to qfnn_test_results/mini_trained_model.pt
+2025-03-04 15:52:47,172 - INFO - Generation prompt: TOK5 TOK10 TOK15
+2025-03-04 15:52:47,172 - INFO - Generating 10 new tokens...
+2025-03-04 15:52:47,214 - INFO - Generated text: TOK89 TOK93 TOK25 TOK66 TOK15 TOK66 TOK78 TOK88 TOK29 TOK14 TOK61 TOK68 TOK75 TOK75 TOK75 TOK75 TOK80 TOK80 TOK80 TOK80
+2025-03-04 15:52:47,214 - INFO - Visualizing token embeddings...
+2025-03-04 15:52:48,134 - INFO - Visualizing attention patterns...
+2025-03-04 15:55:08,149 - INFO - Created dataset with 100 samples, 80 for training
+2025-03-04 15:55:08,149 - INFO - Vocabulary size: 100, Sequence length: 32
+2025-03-04 15:55:08,163 - INFO - Using device: cuda
+2025-03-04 15:55:08,232 - INFO - Model created with 6892 parameters
+2025-03-04 15:55:08,365 - INFO - Forward pass shape: torch.Size([4, 32, 100]), took 0.1308s
+2025-03-04 15:55:08,367 - INFO - Number of attention layers: 2
+2025-03-04 15:55:08,367 - INFO - Attention shape: torch.Size([4, 32, 32])
+2025-03-04 15:55:08,368 - INFO - Using Hebbian learning
+2025-03-04 15:55:08,470 - INFO - Epoch 1/2 - Avg loss: 4.6960
+2025-03-04 15:55:08,481 - INFO - Validation loss: 4.6684
+2025-03-04 15:55:08,611 - INFO - Epoch 2/2 - Avg loss: 4.6234
+2025-03-04 15:55:08,623 - INFO - Validation loss: 4.6540
+2025-03-04 15:55:08,624 - INFO - Model saved to qfnn_test_results/mini_trained_model.pt
+2025-03-04 15:55:08,624 - INFO - Generation prompt: TOK5 TOK10 TOK15
+2025-03-04 15:55:08,625 - INFO - Generating 10 new tokens...
+2025-03-04 15:55:08,666 - INFO - Generated text: TOK45 TOK42 TOK32 TOK98 TOK96 TOK26 TOK57 TOK35 TOK26 TOK40 TOK94 TOK94 TOK7 TOK94 TOK43 TOK43 TOK43 TOK43 TOK43 TOK43
+2025-03-04 15:55:08,667 - INFO - Visualizing token embeddings...
+2025-03-04 15:55:09,605 - INFO - Visualizing attention patterns...
+2025-03-04 15:59:46,288 - INFO - Created dataset with 100 samples, 80 for training
+2025-03-04 15:59:46,288 - INFO - Vocabulary size: 100, Sequence length: 32
+2025-03-04 15:59:46,303 - INFO - Using device: cuda
+2025-03-04 15:59:46,367 - INFO - Model created with 6892 parameters
+2025-03-04 15:59:46,501 - INFO - Forward pass shape: torch.Size([4, 32, 100]), took 0.1333s
+2025-03-04 15:59:46,504 - INFO - Number of attention layers: 2
+2025-03-04 15:59:46,504 - INFO - Attention shape: torch.Size([4, 32, 32])
+2025-03-04 15:59:46,504 - INFO - Using Hebbian learning
+2025-03-04 15:59:46,606 - INFO - Epoch 1/2 - Avg loss: 4.6762
+2025-03-04 15:59:46,634 - INFO - Validation loss: 4.6566
+2025-03-04 15:59:46,749 - INFO - Epoch 2/2 - Avg loss: 4.6234
+2025-03-04 15:59:46,763 - INFO - Validation loss: 4.6373
+2025-03-04 15:59:46,764 - INFO - Model saved to qfnn_test_results/mini_trained_model.pt
+2025-03-04 15:59:46,764 - INFO - Generation prompt: TOK5 TOK10 TOK15
+2025-03-04 15:59:46,765 - INFO - Generating 10 new tokens...
+2025-03-04 15:59:46,828 - INFO - Generated text: TOK12 TOK96 TOK93 TOK46 TOK90 TOK54 TOK35 TOK15 TOK58 TOK55 TOK28 TOK61 TOK65 TOK33 TOK33 TOK33 TOK33 TOK33 TOK33 TOK33
+2025-03-04 15:59:46,829 - INFO - Visualizing token embeddings...
+2025-03-04 15:59:47,764 - INFO - Visualizing attention patterns...
+2025-03-04 15:59:48,753 - INFO - Visualizing phase coherence...
+2025-03-04 15:59:49,403 - INFO - Visualizing token state evolution...
+2025-03-04 15:59:52,081 - INFO - Visualizations saved to qfnn_test_results/visualizations
+2025-03-04 15:59:52,082 - INFO - All test artifacts saved to qfnn_test_results

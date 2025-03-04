@@ -185,18 +185,18 @@ class QFNNVisualizer:
         
         # Create graph
         G = nx.DiGraph()
-        
+    
         # Add nodes
         for i, token in enumerate(tokens):
             G.add_node(i, label=token)
         
         # Add edges with attention weights
-        for i in range(len(tokens)):
-            for j in range(len(tokens)):
+        max_idx = min(len(tokens), attention_matrix.shape[0], attention_matrix.shape[1])
+        for i in range(max_idx):
+            for j in range(max_idx):
                 weight = attention_matrix[i, j]
                 if weight > 0.01:  # Only add edges with significant attention
                     G.add_edge(i, j, weight=weight)
-        
         # Create figure
         plt.figure(figsize=(12, 10))
         
@@ -213,10 +213,17 @@ class QFNNVisualizer:
                                       edge_cmap=plt.cm.Blues, arrows=True, 
                                       arrowsize=10, arrowstyle='->')
         
-        # Add colorbar
-        sm = plt.cm.ScalarMappable(cmap=plt.cm.Blues, norm=plt.Normalize(0, max(edge_weights)))
+        # Add colorbar - FIX: Create a ScalarMappable with proper normalization
+        # Get the current figure and axes
+        fig = plt.gcf()
+        ax = plt.gca()
+
+        # Add colorbar with explicit axes reference
+        sm = plt.cm.ScalarMappable(cmap=plt.cm.Blues, 
+                                norm=plt.Normalize(vmin=min(edge_weights) if edge_weights else 0, 
+                                                    vmax=max(edge_weights) if edge_weights else 1))
         sm.set_array([])
-        plt.colorbar(sm, label='Attention Weight')
+        cbar = plt.colorbar(sm, ax=ax, label='Attention Weight')
         
         plt.title('Attention Flow Between Tokens')
         plt.axis('off')
@@ -242,11 +249,15 @@ class QFNNVisualizer:
                 attn_norm = attn_flat / (torch.sum(attn_flat, dim=1, keepdim=True) + 1e-10)
                 entropy = -torch.sum(attn_norm * torch.log2(attn_norm + 1e-10), dim=1).mean().item()
                 
+                # Calculate average superposition probability
+                avg_superposition = torch.mean(attention[attention > 0]).item()
+                
                 sparsity_data.append({
                     'Sample': sample_idx,
                     'Layer': layer_idx + 1,
                     'Sparsity': sparsity,
                     'Entropy': entropy,
+                    'Avg Superposition': avg_superposition,
                     'Active Connections': nonzero,
                     'Total Connections': total
                 })
@@ -255,7 +266,7 @@ class QFNNVisualizer:
         df = pd.DataFrame(sparsity_data)
         
         # Create visualization
-        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
+        fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(18, 6))
         
         # Sparsity by layer
         sns.barplot(x='Layer', y='Sparsity', data=df, ax=ax1)
@@ -270,17 +281,24 @@ class QFNNVisualizer:
         ax2.set_xlabel('Layer')
         ax2.set_ylabel('Entropy (bits)')
         
+        # Average superposition probability by layer
+        sns.barplot(x='Layer', y='Avg Superposition', data=df, ax=ax3)
+        ax3.set_title('Average Superposition Probability by Layer')
+        ax3.set_xlabel('Layer')
+        ax3.set_ylabel('Superposition Probability')
+        ax3.set_ylim(0, 1)
+        
         plt.tight_layout()
         plt.savefig(f"{self.output_dir}/attention_sparsity.png", dpi=300)
         plt.close()
         
-        # Relationship between sparsity and entropy
+        # Relationship between sparsity and superposition
         plt.figure(figsize=(10, 6))
-        sns.scatterplot(x='Sparsity', y='Entropy', hue='Layer', data=df, s=100)
-        plt.title('Relationship Between Attention Sparsity and Entropy')
+        sns.scatterplot(x='Sparsity', y='Avg Superposition', hue='Layer', data=df, s=100)
+        plt.title('Relationship Between Attention Sparsity and Superposition')
         plt.xlabel('Sparsity (1 - nonzero/total)')
-        plt.ylabel('Entropy (bits)')
-        plt.savefig(f"{self.output_dir}/sparsity_entropy.png", dpi=300)
+        plt.ylabel('Average Superposition Probability')
+        plt.savefig(f"{self.output_dir}/sparsity_superposition.png", dpi=300)
         plt.close()
         
         return df
