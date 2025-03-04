@@ -35,3 +35,9 @@
 2025-03-04 16:27:38,846 - qfnn_training - INFO - New best model saved with Val loss: 8.5806
 2025-03-04 16:27:53,096 - qfnn_training - INFO - Step 4000: Val loss: 10.8666, Val PPL: 52399.25
 2025-03-04 16:28:06,663 - qfnn_training - INFO - Step 5000: Val loss: 12.4570, Val PPL: 257052.58
+2025-03-04 16:30:39,484 - qfnn_training - INFO - Training QFNN on WikiText with config: {'vocab_size': 30522, 'hidden_dim': 256, 'num_layers': 3, 'max_seq_length': 256, 'epsilon': 1e-05, 'threshold': 0.05, 'alpha': 0.5, 'dt_scale': 0.1, 'beta': 10.0, 'r_min': 0.5, 'r_max': 2.0, 'radius_rate': 0.01, 'learning_rate': 0.001, 'use_hebbian': True, 'device': 'cuda'}
+2025-03-04 16:30:41,803 - qfnn_training - INFO - Data prepared: 114957 training batches, 242 validation batches
+2025-03-04 16:30:42,005 - qfnn_training - INFO - Model created with 7905966 total parameters (7905966 trainable)
+2025-03-04 16:30:42,005 - qfnn_training - INFO - Starting training
+2025-03-04 16:30:56,236 - qfnn_training - INFO - Step 1000: Val loss: 11.9925, Val PPL: 161538.75
+2025-03-04 16:30:56,343 - qfnn_training - INFO - New best model saved with Val loss: 11.9925
