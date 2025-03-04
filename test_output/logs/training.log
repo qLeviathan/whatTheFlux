@@ -41,3 +41,181 @@
 2025-03-04 16:30:42,005 - qfnn_training - INFO - Starting training
 2025-03-04 16:30:56,236 - qfnn_training - INFO - Step 1000: Val loss: 11.9925, Val PPL: 161538.75
 2025-03-04 16:30:56,343 - qfnn_training - INFO - New best model saved with Val loss: 11.9925
+2025-03-04 16:31:10,845 - qfnn_training - INFO - Step 2000: Val loss: 12.7796, Val PPL: 354912.04
+2025-03-04 16:31:25,526 - qfnn_training - INFO - Step 3000: Val loss: 8.5806, Val PPL: 5327.49
+2025-03-04 16:31:25,642 - qfnn_training - INFO - New best model saved with Val loss: 8.5806
+2025-03-04 16:31:40,466 - qfnn_training - INFO - Step 4000: Val loss: 10.8666, Val PPL: 52399.25
+2025-03-04 16:31:56,106 - qfnn_training - INFO - Step 5000: Val loss: 12.4570, Val PPL: 257052.58
+2025-03-04 16:32:00,080 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_5000
+2025-03-04 16:32:14,845 - qfnn_training - INFO - Step 6000: Val loss: 11.8189, Val PPL: 135790.21
+2025-03-04 16:32:29,623 - qfnn_training - INFO - Step 7000: Val loss: 18.4317, Val PPL: 101107204.46
+2025-03-04 16:32:43,457 - qfnn_training - INFO - Step 8000: Val loss: 11.0426, Val PPL: 62482.49
+2025-03-04 16:32:57,226 - qfnn_training - INFO - Step 9000: Val loss: 10.2696, Val PPL: 28843.58
+2025-03-04 16:33:11,187 - qfnn_training - INFO - Step 10000: Val loss: 11.7593, Val PPL: 127940.09
+2025-03-04 16:33:14,989 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_10000
+2025-03-04 16:33:28,825 - qfnn_training - INFO - Step 11000: Val loss: 10.5324, Val PPL: 37512.49
+2025-03-04 16:33:42,575 - qfnn_training - INFO - Step 12000: Val loss: 11.2219, Val PPL: 74751.23
+2025-03-04 16:33:56,241 - qfnn_training - INFO - Step 13000: Val loss: 11.8357, Val PPL: 138101.04
+2025-03-04 16:34:09,718 - qfnn_training - INFO - Step 14000: Val loss: 8.9162, Val PPL: 7451.47
+2025-03-04 16:34:23,348 - qfnn_training - INFO - Step 15000: Val loss: 9.6476, Val PPL: 15485.32
+2025-03-04 16:34:27,051 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_15000
+2025-03-04 16:34:41,040 - qfnn_training - INFO - Step 16000: Val loss: 14.9029, Val PPL: 2966662.36
+2025-03-04 16:34:55,252 - qfnn_training - INFO - Step 17000: Val loss: 10.3335, Val PPL: 30745.38
+2025-03-04 16:35:09,876 - qfnn_training - INFO - Step 18000: Val loss: 10.1405, Val PPL: 25348.15
+2025-03-04 16:35:24,516 - qfnn_training - INFO - Step 19000: Val loss: 12.0495, Val PPL: 171008.14
+2025-03-04 16:35:39,177 - qfnn_training - INFO - Step 20000: Val loss: 9.9224, Val PPL: 20382.63
+2025-03-04 16:35:42,720 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_20000
+2025-03-04 16:35:57,315 - qfnn_training - INFO - Step 21000: Val loss: 13.1842, Val PPL: 531909.11
+2025-03-04 16:36:11,961 - qfnn_training - INFO - Step 22000: Val loss: 16.0498, Val PPL: 9339647.62
+2025-03-04 16:36:25,750 - qfnn_training - INFO - Step 23000: Val loss: 8.9033, Val PPL: 7356.37
+2025-03-04 16:36:39,484 - qfnn_training - INFO - Step 24000: Val loss: 10.5190, Val PPL: 37012.57
+2025-03-04 16:36:53,279 - qfnn_training - INFO - Step 25000: Val loss: 9.2029, Val PPL: 9926.01
+2025-03-04 16:36:56,762 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_25000
+2025-03-04 16:37:10,739 - qfnn_training - INFO - Step 26000: Val loss: 9.9655, Val PPL: 21279.67
+2025-03-04 16:37:24,633 - qfnn_training - INFO - Step 27000: Val loss: 9.6194, Val PPL: 15054.44
+2025-03-04 16:37:39,237 - qfnn_training - INFO - Step 28000: Val loss: 10.8548, Val PPL: 51784.32
+2025-03-04 16:37:53,097 - qfnn_training - INFO - Step 29000: Val loss: 20.0061, Val PPL: 488127769.06
+2025-03-04 16:38:06,839 - qfnn_training - INFO - Step 30000: Val loss: 13.7084, Val PPL: 898417.80
+2025-03-04 16:38:10,408 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_30000
+2025-03-04 16:38:24,432 - qfnn_training - INFO - Step 31000: Val loss: 10.9071, Val PPL: 54563.78
+2025-03-04 16:38:38,582 - qfnn_training - INFO - Step 32000: Val loss: 10.9370, Val PPL: 56221.23
+2025-03-04 16:38:52,637 - qfnn_training - INFO - Step 33000: Val loss: 9.3593, Val PPL: 11606.65
+2025-03-04 16:39:06,645 - qfnn_training - INFO - Step 34000: Val loss: 10.0395, Val PPL: 22913.47
+2025-03-04 16:39:20,630 - qfnn_training - INFO - Step 35000: Val loss: 14.8599, Val PPL: 2841614.61
+2025-03-04 16:39:24,352 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_35000
+2025-03-04 16:39:37,831 - qfnn_training - INFO - Step 36000: Val loss: 10.8282, Val PPL: 50423.74
+2025-03-04 16:39:51,560 - qfnn_training - INFO - Step 37000: Val loss: 9.5397, Val PPL: 13901.34
+2025-03-04 16:40:05,293 - qfnn_training - INFO - Step 38000: Val loss: 9.5575, Val PPL: 14150.89
+2025-03-04 16:40:19,256 - qfnn_training - INFO - Step 39000: Val loss: 12.2347, Val PPL: 205802.92
+2025-03-04 16:40:33,313 - qfnn_training - INFO - Step 40000: Val loss: 11.5580, Val PPL: 104614.40
+2025-03-04 16:40:36,886 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_40000
+2025-03-04 16:40:51,010 - qfnn_training - INFO - Step 41000: Val loss: 11.0525, Val PPL: 63102.40
+2025-03-04 16:41:05,096 - qfnn_training - INFO - Step 42000: Val loss: 9.1808, Val PPL: 9709.05
+2025-03-04 16:41:19,103 - qfnn_training - INFO - Step 43000: Val loss: 11.5471, Val PPL: 103481.37
+2025-03-04 16:41:33,099 - qfnn_training - INFO - Step 44000: Val loss: 16.4407, Val PPL: 13806936.61
+2025-03-04 16:41:47,212 - qfnn_training - INFO - Step 45000: Val loss: 10.9587, Val PPL: 57454.11
+2025-03-04 16:41:50,775 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_45000
+2025-03-04 16:42:04,803 - qfnn_training - INFO - Step 46000: Val loss: 11.0949, Val PPL: 65832.78
+2025-03-04 16:42:18,944 - qfnn_training - INFO - Step 47000: Val loss: 9.1512, Val PPL: 9425.98
+2025-03-04 16:42:33,033 - qfnn_training - INFO - Step 48000: Val loss: 18.3103, Val PPL: 89550175.70
+2025-03-04 16:42:46,742 - qfnn_training - INFO - Step 49000: Val loss: 10.8106, Val PPL: 49540.87
+2025-03-04 16:43:00,383 - qfnn_training - INFO - Step 50000: Val loss: 10.2294, Val PPL: 27705.75
+2025-03-04 16:43:03,974 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_50000
+2025-03-04 16:43:17,942 - qfnn_training - INFO - Step 51000: Val loss: 15.1598, Val PPL: 3835325.41
+2025-03-04 16:43:31,687 - qfnn_training - INFO - Step 52000: Val loss: 12.9880, Val PPL: 437130.06
+2025-03-04 16:43:45,712 - qfnn_training - INFO - Step 53000: Val loss: 13.0031, Val PPL: 443778.86
+2025-03-04 16:43:59,590 - qfnn_training - INFO - Step 54000: Val loss: 9.4934, Val PPL: 13272.33
+2025-03-04 16:44:13,700 - qfnn_training - INFO - Step 55000: Val loss: 15.0830, Val PPL: 3551870.91
+2025-03-04 16:44:17,238 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_55000
+2025-03-04 16:44:31,275 - qfnn_training - INFO - Step 56000: Val loss: 10.4106, Val PPL: 33208.54
+2025-03-04 16:44:45,267 - qfnn_training - INFO - Step 57000: Val loss: 11.7784, Val PPL: 130399.13
+2025-03-04 16:44:59,352 - qfnn_training - INFO - Step 58000: Val loss: 10.4776, Val PPL: 35511.25
+2025-03-04 16:45:13,130 - qfnn_training - INFO - Step 59000: Val loss: 14.8841, Val PPL: 2911255.73
+2025-03-04 16:45:26,926 - qfnn_training - INFO - Step 60000: Val loss: 10.6663, Val PPL: 42884.38
+2025-03-04 16:45:30,601 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_60000
+2025-03-04 16:45:44,626 - qfnn_training - INFO - Step 61000: Val loss: 8.6701, Val PPL: 5826.20
+2025-03-04 16:45:58,521 - qfnn_training - INFO - Step 62000: Val loss: 9.7806, Val PPL: 17687.08
+2025-03-04 16:46:12,532 - qfnn_training - INFO - Step 63000: Val loss: 9.7518, Val PPL: 17184.32
+2025-03-04 16:46:26,648 - qfnn_training - INFO - Step 64000: Val loss: 11.4213, Val PPL: 91240.98
+2025-03-04 16:46:40,636 - qfnn_training - INFO - Step 65000: Val loss: 12.0208, Val PPL: 166169.38
+2025-03-04 16:46:44,307 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_65000
+2025-03-04 16:46:58,320 - qfnn_training - INFO - Step 66000: Val loss: 10.2434, Val PPL: 28096.64
+2025-03-04 16:47:12,571 - qfnn_training - INFO - Step 67000: Val loss: 14.9337, Val PPL: 3059378.31
+2025-03-04 16:47:26,697 - qfnn_training - INFO - Step 68000: Val loss: 11.1475, Val PPL: 69393.38
+2025-03-04 16:47:40,762 - qfnn_training - INFO - Step 69000: Val loss: 9.5085, Val PPL: 13474.21
+2025-03-04 16:47:54,758 - qfnn_training - INFO - Step 70000: Val loss: 13.3506, Val PPL: 628186.65
+2025-03-04 16:47:58,351 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_70000
+2025-03-04 16:48:12,369 - qfnn_training - INFO - Step 71000: Val loss: 10.3612, Val PPL: 31608.77
+2025-03-04 16:48:27,540 - qfnn_training - INFO - Step 72000: Val loss: 13.7173, Val PPL: 906441.08
+2025-03-04 16:48:42,671 - qfnn_training - INFO - Step 73000: Val loss: 15.1329, Val PPL: 3733816.92
+2025-03-04 16:48:57,275 - qfnn_training - INFO - Step 74000: Val loss: 13.2217, Val PPL: 552200.91
+2025-03-04 16:49:12,146 - qfnn_training - INFO - Step 75000: Val loss: 15.1398, Val PPL: 3759588.87
+2025-03-04 16:49:15,832 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_75000
+2025-03-04 16:49:30,830 - qfnn_training - INFO - Step 76000: Val loss: 9.7715, Val PPL: 17526.77
+2025-03-04 16:49:45,469 - qfnn_training - INFO - Step 77000: Val loss: 10.7005, Val PPL: 44377.45
+2025-03-04 16:49:59,649 - qfnn_training - INFO - Step 78000: Val loss: 9.1845, Val PPL: 9744.96
+2025-03-04 16:50:14,316 - qfnn_training - INFO - Step 79000: Val loss: 15.3580, Val PPL: 4676207.96
+2025-03-04 16:50:29,673 - qfnn_training - INFO - Step 80000: Val loss: 12.4184, Val PPL: 247301.01
+2025-03-04 16:50:33,246 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_80000
+2025-03-04 16:50:48,012 - qfnn_training - INFO - Step 81000: Val loss: 12.4365, Val PPL: 251832.74
+2025-03-04 16:51:02,344 - qfnn_training - INFO - Step 82000: Val loss: 10.2337, Val PPL: 27825.96
+2025-03-04 16:51:17,270 - qfnn_training - INFO - Step 83000: Val loss: 18.8772, Val PPL: 157853797.84
+2025-03-04 16:51:31,725 - qfnn_training - INFO - Step 84000: Val loss: 10.2737, Val PPL: 28960.75
+2025-03-04 16:51:46,131 - qfnn_training - INFO - Step 85000: Val loss: 14.0488, Val PPL: 1262727.63
+2025-03-04 16:51:49,967 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_85000
+2025-03-04 16:52:03,930 - qfnn_training - INFO - Step 86000: Val loss: 10.6350, Val PPL: 41562.68
+2025-03-04 16:52:17,956 - qfnn_training - INFO - Step 87000: Val loss: 10.4504, Val PPL: 34558.14
+2025-03-04 16:52:31,881 - qfnn_training - INFO - Step 88000: Val loss: 12.0219, Val PPL: 166359.47
+2025-03-04 16:52:45,882 - qfnn_training - INFO - Step 89000: Val loss: 9.7882, Val PPL: 17822.38
+2025-03-04 16:52:59,991 - qfnn_training - INFO - Step 90000: Val loss: 9.9015, Val PPL: 19959.66
+2025-03-04 16:53:03,742 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_90000
+2025-03-04 16:53:17,850 - qfnn_training - INFO - Step 91000: Val loss: 11.2192, Val PPL: 74548.89
+2025-03-04 16:53:31,737 - qfnn_training - INFO - Step 92000: Val loss: 11.6493, Val PPL: 114611.62
+2025-03-04 16:53:45,679 - qfnn_training - INFO - Step 93000: Val loss: 10.2983, Val PPL: 29681.09
+2025-03-04 16:53:59,489 - qfnn_training - INFO - Step 94000: Val loss: 16.8060, Val PPL: 19896347.00
+2025-03-04 16:54:13,463 - qfnn_training - INFO - Step 95000: Val loss: 10.4004, Val PPL: 32871.26
+2025-03-04 16:54:17,344 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_95000
+2025-03-04 16:54:31,708 - qfnn_training - INFO - Step 96000: Val loss: 11.8068, Val PPL: 134167.23
+2025-03-04 16:54:45,687 - qfnn_training - INFO - Step 97000: Val loss: 8.7506, Val PPL: 6314.73
+2025-03-04 16:54:59,869 - qfnn_training - INFO - Step 98000: Val loss: 11.5221, Val PPL: 100926.48
+2025-03-04 16:55:13,918 - qfnn_training - INFO - Step 99000: Val loss: 21.1763, Val PPL: 1573084724.48
+2025-03-04 16:55:28,180 - qfnn_training - INFO - Step 100000: Val loss: 10.1643, Val PPL: 25958.94
+2025-03-04 16:55:31,618 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_100000
+2025-03-04 16:55:45,872 - qfnn_training - INFO - Step 101000: Val loss: 14.0128, Val PPL: 1218059.38
+2025-03-04 16:56:00,122 - qfnn_training - INFO - Step 102000: Val loss: 12.4226, Val PPL: 248362.50
+2025-03-04 16:56:14,091 - qfnn_training - INFO - Step 103000: Val loss: 8.8648, Val PPL: 7078.41
+2025-03-04 16:56:27,916 - qfnn_training - INFO - Step 104000: Val loss: 13.0559, Val PPL: 467838.26
+2025-03-04 16:56:42,155 - qfnn_training - INFO - Step 105000: Val loss: 15.5914, Val PPL: 5905724.23
+2025-03-04 16:56:45,983 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_105000
+2025-03-04 16:57:00,991 - qfnn_training - INFO - Step 106000: Val loss: 9.7741, Val PPL: 17573.42
+2025-03-04 16:57:15,399 - qfnn_training - INFO - Step 107000: Val loss: 10.1326, Val PPL: 25150.12
+2025-03-04 16:57:30,458 - qfnn_training - INFO - Step 108000: Val loss: 9.4698, Val PPL: 12962.79
+2025-03-04 16:57:44,730 - qfnn_training - INFO - Step 109000: Val loss: 10.9282, Val PPL: 55723.53
+2025-03-04 16:57:58,767 - qfnn_training - INFO - Step 110000: Val loss: 13.8032, Val PPL: 987736.62
+2025-03-04 16:58:02,497 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_110000
+2025-03-04 16:58:16,951 - qfnn_training - INFO - Step 111000: Val loss: 9.0068, Val PPL: 8158.32
+2025-03-04 16:58:30,828 - qfnn_training - INFO - Step 112000: Val loss: 10.7454, Val PPL: 46415.33
+2025-03-04 16:58:45,009 - qfnn_training - INFO - Step 113000: Val loss: 11.6379, Val PPL: 113308.54
+2025-03-04 16:58:59,705 - qfnn_training - INFO - Step 114000: Val loss: 13.0683, Val PPL: 473665.67
+2025-03-04 16:59:14,577 - qfnn_training - INFO - Epoch 1/2 completed in 1712.57s
+2025-03-04 16:59:14,577 - qfnn_training - INFO - Train loss: 11.5608, Train PPL: 104901.22
+2025-03-04 16:59:14,577 - qfnn_training - INFO - Val loss: 9.8789, Val PPL: 19513.72
+2025-03-04 16:59:14,578 - qfnn_training - INFO - Attention sparsity: 0.00%
+2025-03-04 16:59:14,578 - qfnn_training - INFO - Radius stats: min=0.50, max=2.00, mean=1.25
+2025-03-04 16:59:16,012 - qfnn_training - INFO - Step 115000: Val loss: 13.3339, Val PPL: 617773.03
+2025-03-04 16:59:19,786 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_115000
+2025-03-04 16:59:35,023 - qfnn_training - INFO - Step 116000: Val loss: 10.3283, Val PPL: 30587.08
+2025-03-04 16:59:50,222 - qfnn_training - INFO - Step 117000: Val loss: 10.1732, Val PPL: 26192.45
+2025-03-04 17:00:05,515 - qfnn_training - INFO - Step 118000: Val loss: 10.0172, Val PPL: 22409.02
+2025-03-04 17:00:20,625 - qfnn_training - INFO - Step 119000: Val loss: 9.6319, Val PPL: 15243.20
+2025-03-04 17:00:35,084 - qfnn_training - INFO - Step 120000: Val loss: 15.6224, Val PPL: 6091644.15
+2025-03-04 17:00:38,957 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_120000
+2025-03-04 17:00:53,708 - qfnn_training - INFO - Step 121000: Val loss: 12.8340, Val PPL: 374754.94
+2025-03-04 17:01:07,904 - qfnn_training - INFO - Step 122000: Val loss: 10.5840, Val PPL: 39499.50
+2025-03-04 17:01:22,018 - qfnn_training - INFO - Step 123000: Val loss: 10.9710, Val PPL: 58163.44
+2025-03-04 17:01:36,494 - qfnn_training - INFO - Step 124000: Val loss: 8.9881, Val PPL: 8006.85
+2025-03-04 17:01:50,697 - qfnn_training - INFO - Step 125000: Val loss: 9.6442, Val PPL: 15431.89
+2025-03-04 17:01:54,186 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_125000
+2025-03-04 17:02:09,010 - qfnn_training - INFO - Step 126000: Val loss: 9.1896, Val PPL: 9794.99
+2025-03-04 17:02:23,388 - qfnn_training - INFO - Step 127000: Val loss: 11.2048, Val PPL: 73481.67
+2025-03-04 17:02:37,372 - qfnn_training - INFO - Step 128000: Val loss: 13.3657, Val PPL: 637760.33
+2025-03-04 17:02:51,439 - qfnn_training - INFO - Step 129000: Val loss: 8.4613, Val PPL: 4728.15
+2025-03-04 17:02:51,561 - qfnn_training - INFO - New best model saved with Val loss: 8.4613
+2025-03-04 17:03:05,693 - qfnn_training - INFO - Step 130000: Val loss: 13.5401, Val PPL: 759231.57
+2025-03-04 17:03:09,563 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_130000
+2025-03-04 17:03:24,248 - qfnn_training - INFO - Step 131000: Val loss: 8.4429, Val PPL: 4641.95
+2025-03-04 17:03:24,341 - qfnn_training - INFO - New best model saved with Val loss: 8.4429
+2025-03-04 17:03:38,889 - qfnn_training - INFO - Step 132000: Val loss: 9.9201, Val PPL: 20335.37
+2025-03-04 17:03:53,143 - qfnn_training - INFO - Step 133000: Val loss: 10.2388, Val PPL: 27968.37
+2025-03-04 17:04:07,738 - qfnn_training - INFO - Step 134000: Val loss: 18.5333, Val PPL: 111920694.76
+2025-03-04 17:04:21,768 - qfnn_training - INFO - Step 135000: Val loss: 11.6879, Val PPL: 119119.16
+2025-03-04 17:04:25,297 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_135000
+2025-03-04 17:04:39,913 - qfnn_training - INFO - Step 136000: Val loss: 13.7988, Val PPL: 983405.89
+2025-03-04 17:04:54,240 - qfnn_training - INFO - Step 137000: Val loss: 11.9273, Val PPL: 151344.17
+2025-03-04 17:05:08,551 - qfnn_training - INFO - Step 138000: Val loss: 10.1773, Val PPL: 26299.59
+2025-03-04 17:05:22,950 - qfnn_training - INFO - Step 139000: Val loss: 8.4316, Val PPL: 4590.00
+2025-03-04 17:05:23,042 - qfnn_training - INFO - New best model saved with Val loss: 8.4316
+2025-03-04 17:05:37,433 - qfnn_training - INFO - Step 140000: Val loss: 9.4590, Val PPL: 12822.43
+2025-03-04 17:05:41,123 - qfnn_training - INFO - Visualizations saved to test_output/visualizations/step_140000
+2025-03-04 17:05:55,835 - qfnn_training - INFO - Step 141000: Val loss: 11.2809, Val PPL: 79289.07
+2025-03-04 17:06:10,448 - qfnn_training - INFO - Step 142000: Val loss: 8.6863, Val PPL: 5921.39
